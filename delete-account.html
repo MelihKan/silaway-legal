@@ -128,8 +128,11 @@
     font-size: 14px;
     margin: 10px 0;
   }
-  .content[data-lang="en"] .tr { display: none; }
-  .content[data-lang="tr"] .en { display: none; }
+  .content > .tr, .content > .en, .content > .de, .content > .nl { display: none; }
+  .content[data-lang="tr"] > .tr,
+  .content[data-lang="en"] > .en,
+  .content[data-lang="de"] > .de,
+  .content[data-lang="nl"] > .nl { display: block; }
   footer {
     margin-top: 48px;
     padding-top: 20px;
@@ -147,6 +150,8 @@
     <div class="lang-tabs" role="tablist">
       <button class="lang-tab active" data-lang="tr">TR</button>
       <button class="lang-tab" data-lang="en">EN</button>
+      <button class="lang-tab" data-lang="de">DE</button>
+      <button class="lang-tab" data-lang="nl">NL</button>
     </div>
   </header>
 
@@ -252,6 +257,106 @@
       Privacy Policy: <a href="./privacy.html">privacy.html</a></p>
     </div>
 
+    <!-- ───────────── DEUTSCH ───────────── -->
+    <div class="de">
+      <h1>Konto- und Datenlöschung</h1>
+      <div class="meta">App: SilaWay (com.silaway.app) · Entwickler: SilaWay · Zuletzt aktualisiert: 2026-06-21</div>
+
+      <div class="summary">
+        <div class="summary-label">Zusammenfassung</div>
+        <p>• Sie können Ihr Konto direkt in der App dauerhaft löschen.</p>
+        <p>• Wenn Sie keinen Zugriff auf die App haben, können Sie die Löschung per E-Mail an <a href="mailto:destek@silaway.app">destek@silaway.app</a> beantragen.</p>
+        <p>• Mit Ihrem Konto verknüpfte personenbezogene Daten werden im Moment der Löschung entfernt; technische Sicherungskopien werden spätestens innerhalb von 30 Tagen gelöscht.</p>
+      </div>
+
+      <h2>1. Löschung in der App (empfohlen)</h2>
+      <p>So löschen Sie Ihr Konto und alle damit verbundenen Daten selbst:</p>
+      <ol>
+        <li>Öffnen Sie die SilaWay-App und melden Sie sich bei Ihrem Konto an.</li>
+        <li>Gehen Sie zum Bildschirm <strong>Einstellungen</strong>.</li>
+        <li>Tippen Sie auf <strong>Konto löschen</strong>.</li>
+        <li>Authentifizieren Sie sich aus Sicherheitsgründen erneut (erneute Anmeldung) und bestätigen Sie.</li>
+      </ol>
+      <p>Nach Abschluss werden Ihr Konto und Ihre personenbezogenen Daten dauerhaft gelöscht.</p>
+
+      <h2>2. Löschung per E-Mail beantragen</h2>
+      <p>Wenn Sie keinen Zugriff auf die App haben oder Ihr Gerät verloren haben, senden Sie eine E-Mail mit dem Betreff <strong>„Antrag auf Kontolöschung"</strong> an <a href="mailto:destek@silaway.app">destek@silaway.app</a> von der E-Mail-Adresse, mit der Sie sich registriert haben. Nach Überprüfung Ihrer Identität bearbeiten wir Ihren Antrag <strong>spätestens innerhalb von 30 Tagen</strong>.</p>
+
+      <h2>3. Daten, die gelöscht werden</h2>
+      <p>Bei der Löschung Ihres Kontos werden folgende personenbezogene Daten entfernt:</p>
+      <ul>
+        <li>Kontoinformationen (Name, E-Mail, Profilbild)</li>
+        <li>Nachrichten, die Sie im Community-Chat gepostet haben, und Ihr Spitzname</li>
+        <li>Von Ihnen hochgeladene Fotos/Bilder</li>
+        <li>Mit Ihrem Konto verknüpfte Geräte-/Nutzungsdaten und Einstellungen</li>
+      </ul>
+
+      <h2>4. Daten, die aufbewahrt werden</h2>
+      <p>Folgendes kann nach der Kontolöschung verbleiben:</p>
+      <ul>
+        <li><strong>Anonyme Beiträge zu Grenzwartezeiten:</strong> werden als aggregierte Statistiken für die Lebensdauer des Dienstes aufbewahrt; sie enthalten keine Roh-GPS-Daten und können nicht mit Ihrer Identität oder Ihrem Standort verknüpft werden.</li>
+        <li><strong>Gesetzlich aufbewahrungspflichtige Aufzeichnungen:</strong> nur für den durch geltendes Recht vorgeschriebenen Zeitraum.</li>
+        <li><strong>Technische Sicherungskopien:</strong> werden ab dem Moment der Löschung <strong>spätestens innerhalb von 30 Tagen</strong> vollständig gelöscht.</li>
+      </ul>
+
+      <div class="warn">Kopien von Nachrichten, die Sie im Community-Chat gepostet haben, können auf den Geräten anderer Nutzer verbleiben, die diese Nachricht bereits gesehen haben; diese Kopien liegen außerhalb unserer Kontrolle.</div>
+
+      <h2>5. Kontakt</h2>
+      <p>Entwickler: <strong>SilaWay</strong><br>
+      E-Mail: <a href="mailto:destek@silaway.app">destek@silaway.app</a><br>
+      Datenschutzerklärung: <a href="./privacy.html">privacy.html</a></p>
+    </div>
+
+    <!-- ───────────── NEDERLANDS ───────────── -->
+    <div class="nl">
+      <h1>Account en gegevens verwijderen</h1>
+      <div class="meta">App: SilaWay (com.silaway.app) · Ontwikkelaar: SilaWay · Laatst bijgewerkt: 2026-06-21</div>
+
+      <div class="summary">
+        <div class="summary-label">Samenvatting</div>
+        <p>• U kunt uw account rechtstreeks vanuit de app permanent verwijderen.</p>
+        <p>• Als u geen toegang tot de app heeft, kunt u verwijdering aanvragen door te mailen naar <a href="mailto:destek@silaway.app">destek@silaway.app</a>.</p>
+        <p>• Persoonsgegevens die aan uw account zijn gekoppeld, worden op het moment van verwijdering verwijderd; technische back-upkopieën worden uiterlijk binnen 30 dagen gewist.</p>
+      </div>
+
+      <h2>1. Verwijderen vanuit de app (aanbevolen)</h2>
+      <p>Zo verwijdert u zelf uw account en alle bijbehorende gegevens:</p>
+      <ol>
+        <li>Open de SilaWay-app en log in op uw account.</li>
+        <li>Ga naar het scherm <strong>Instellingen</strong>.</li>
+        <li>Tik op <strong>Account verwijderen</strong>.</li>
+        <li>Verifieer uzelf opnieuw (opnieuw inloggen) voor de veiligheid en bevestig.</li>
+      </ol>
+      <p>Zodra dit is voltooid, worden uw account en persoonsgegevens permanent verwijderd.</p>
+
+      <h2>2. Verwijdering aanvragen per e-mail</h2>
+      <p>Als u geen toegang tot de app heeft of uw apparaat kwijt bent, stuur dan een e-mail met als onderwerp <strong>"Verzoek tot accountverwijdering"</strong> naar <a href="mailto:destek@silaway.app">destek@silaway.app</a> vanaf het e-mailadres waarmee u zich heeft geregistreerd. Na verificatie van uw identiteit verwerken wij uw verzoek <strong>uiterlijk binnen 30 dagen</strong>.</p>
+
+      <h2>3. Gegevens die worden verwijderd</h2>
+      <p>Wanneer uw account wordt verwijderd, worden de volgende persoonsgegevens verwijderd:</p>
+      <ul>
+        <li>Accountgegevens (naam, e-mail, profielfoto)</li>
+        <li>Berichten die u in de community-chat heeft geplaatst en uw bijnaam</li>
+        <li>Door u geüploade foto's/afbeeldingen</li>
+        <li>Aan uw account gekoppelde apparaat-/gebruiksgegevens en voorkeuren</li>
+      </ul>
+
+      <h2>4. Gegevens die worden bewaard</h2>
+      <p>Het volgende kan na accountverwijdering achterblijven:</p>
+      <ul>
+        <li><strong>Anonieme bijdragen aan grenswachttijden:</strong> worden als geaggregeerde statistieken bewaard zolang de dienst bestaat; ze bevatten geen ruwe GPS-gegevens en kunnen niet aan uw identiteit of locatie worden gekoppeld.</li>
+        <li><strong>Wettelijk verplicht te bewaren gegevens:</strong> alleen voor de door de toepasselijke wetgeving vereiste periode.</li>
+        <li><strong>Technische back-upkopieën:</strong> worden vanaf het moment van verwijdering <strong>uiterlijk binnen 30 dagen</strong> volledig gewist.</li>
+      </ul>
+
+      <div class="warn">Kopieën van berichten die u in de community-chat heeft geplaatst, kunnen achterblijven op de apparaten van andere gebruikers die het bericht al hebben gezien; deze kopieën vallen buiten onze controle.</div>
+
+      <h2>5. Contact</h2>
+      <p>Ontwikkelaar: <strong>SilaWay</strong><br>
+      E-mail: <a href="mailto:destek@silaway.app">destek@silaway.app</a><br>
+      Privacybeleid: <a href="./privacy.html">privacy.html</a></p>
+    </div>
+
   </div>
 
   <footer>
@@ -263,7 +368,8 @@
   const tabs = document.querySelectorAll('.lang-tab');
   const content = document.querySelector('.content');
   const browserLang = (navigator.language || 'tr').slice(0, 2);
-  const defaultLang = browserLang === 'en' ? 'en' : 'tr';
+  const supported = ['tr', 'en', 'de', 'nl'];
+  const defaultLang = supported.includes(browserLang) ? browserLang : 'tr';
   setLang(defaultLang);
 
   tabs.forEach((tab) => {

@@ -116,8 +116,20 @@
     font-size: 14px;
     margin: 12px 0;
   }
-  .content[data-lang="en"] .tr { display: none; }
-  .content[data-lang="tr"] .en { display: none; }
+  .warn {
+    background: rgba(255, 107, 0, 0.08);
+    border: 1px solid rgba(255, 107, 0, 0.3);
+    color: #ffb380;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  .content > .tr, .content > .en, .content > .de, .content > .nl { display: none; }
+  .content[data-lang="tr"] > .tr,
+  .content[data-lang="en"] > .en,
+  .content[data-lang="de"] > .de,
+  .content[data-lang="nl"] > .nl { display: block; }
   footer {
     margin-top: 48px;
     padding-top: 20px;
@@ -135,6 +147,8 @@
     <div class="lang-tabs" role="tablist">
       <button class="lang-tab active" data-lang="tr">TR</button>
       <button class="lang-tab" data-lang="en">EN</button>
+      <button class="lang-tab" data-lang="de">DE</button>
+      <button class="lang-tab" data-lang="nl">NL</button>
     </div>
   </header>
 
@@ -336,6 +350,202 @@
       <a href="mailto:destek@silaway.app">destek@silaway.app</a></p>
     </div>
 
+    <!-- ───────────── DEUTSCH ───────────── -->
+    <div class="de">
+      <h1>Nutzungsbedingungen</h1>
+      <div class="meta">Version 1.0.7 · Zuletzt aktualisiert: 2026-06-16</div>
+
+      <div class="summary">
+        <div class="summary-label">Zusammenfassung (rechtlich nicht bindend)</div>
+        <p>• SilaWay ist eine kostenlose Reisebegleiter-App.</p>
+        <p>• Grenzwartezeiten sind Schätzungen; für offizielle Entscheidungen wenden Sie sich an das Handelsministerium.</p>
+        <p>• Wenn Sie die Community-Regeln nicht beachten, kann Ihr Konto gesperrt werden.</p>
+        <p>• In dieser Version sind alle Funktionen kostenlos; es gibt keine In-App-Käufe, Abonnements oder Premium-Pakete.</p>
+      </div>
+
+      <p>Der nachstehende Text ist die vollständige und verbindliche Vereinbarung.</p>
+
+      <h2>1. Vertragsparteien</h2>
+      <p>Diese Nutzungsbedingungen („Vereinbarung") werden zwischen <strong>SilaWay</strong> („Diensteanbieter") und der natürlichen Person, die die App nutzt („Nutzer"), geschlossen.</p>
+      <p>Durch die Installation oder Nutzung der App bestätigen Sie, dass Sie diese Vereinbarung gelesen, verstanden und akzeptiert haben.</p>
+
+      <h2>2. Beschreibung des Dienstes</h2>
+      <p>Die App bietet Dienste wie Schätzungen der Wartezeit an Grenzübergängen, Karten und Wegbeschreibungen, Wetter, Informationen zu Kraftstoffpreisen, Live-Kamerastreams (von Drittanbietern bezogen) und einen Community-Chat.</p>
+      <p>Ein wesentlicher Teil der Informationen wird aus Nutzerbeiträgen, offenen Datenquellen und Drittanbieter-APIs zusammengestellt. <strong>Die Informationen dienen nur zu Informationszwecken und stellen keine offizielle Quelle dar.</strong> Stützen Sie Ihre Fahr- und Reiseentscheidungen nicht allein auf diese App; bestätigen Sie sie bei der zuständigen Zollbehörde und den offiziellen Stellen.</p>
+
+      <h2>3. Altersbeschränkung</h2>
+      <p>Sie müssen mindestens <strong>18 Jahre alt</strong> sein, um die App zu nutzen. Nutzer unter 18 Jahren dürfen die App nicht verwenden.</p>
+
+      <h2>4. Konto und Sicherheit</h2>
+      <ul>
+        <li>Sie sind für die Sicherheit Ihres Kontos verantwortlich. Wenn Sie eine unbefugte Nutzung Ihres Passworts oder Ihrer Sitzung vermuten, benachrichtigen Sie bitte umgehend <a href="mailto:destek@silaway.app">destek@silaway.app</a>.</li>
+        <li>Für Gast- und registrierte Nutzer gelten unterschiedliche Funktionen und Limits.</li>
+        <li>Das Erstellen gefälschter Konten, das Vortäuschen einer fremden Identität, der Einsatz automatisierter Bots oder der kommerzielle Verkauf/die Übertragung von Konten ist untersagt.</li>
+        <li>Mit Apples „Private Email Relay" erstellte Alias-Konten gelten <strong>nicht als gefälschte Konten</strong>; dies ist eine offizielle Datenschutzfunktion von Apple.</li>
+      </ul>
+
+      <h2>5. Zulässige Nutzung</h2>
+      <p>Es ist untersagt, die App zu folgenden Zwecken zu nutzen:</p>
+      <ul>
+        <li>Teilen von illegalen, belästigenden, hasserfüllten, diskriminierenden oder sexuell ausbeuterischen Inhalten</li>
+        <li>Senden von Spam, hartnäckigen oder unerwünschten Nachrichten an andere Nutzer</li>
+        <li>Umgehung der Sicherheitsmaßnahmen der App, Senden großer Mengen automatisierter Anfragen oder Missbrauch von Drittanbieter-APIs über die App</li>
+        <li>Einreichen <strong>absichtlich irreführender</strong> Meldungen (z. B. falsche Grenzwartezeiten)</li>
+        <li>Reverse Engineering der App außerhalb des Anwendungsbereichs der EU-Software-Richtlinie 2009/24/EG Art. 5-6 oder der Versuch eines unbefugten Zugriffs auf den Quellcode</li>
+      </ul>
+      <p>Verstöße können zur Sperrung oder, je nach Schwere, zur Kündigung Ihres Kontos <strong>ohne vorherige Ankündigung</strong> führen. Sie können gegen eine Kündigungsentscheidung über <a href="mailto:destek@silaway.app">destek@silaway.app</a> Widerspruch einlegen.</p>
+
+      <h2>6. Nutzerinhalte</h2>
+      <p>Sie behalten das Eigentum an den Inhalten (Nachrichten, Bilder), die Sie im Chat und in anderen für Nutzer sichtbaren Bereichen veröffentlichen. Sie gewähren SilaWay jedoch eine <strong>nicht-exklusive, gebührenfreie, weltweite, unterlizenzierbare Lizenz</strong>, diese Inhalte innerhalb der App anzuzeigen, zu speichern und zu übertragen. Diese Lizenz besteht über die Kontolöschung hinaus fort, soweit Kopien auf den Geräten anderer Nutzer verbleiben können.</p>
+      <p>Inhalte, die gegen die Community-Regeln verstoßen, werden nach Nutzermeldungen oder durch Moderation entfernt.</p>
+      <div class="warn"><strong>NULLTOLERANZ GEGENÜBER ANSTÖSSIGEN INHALTEN:</strong> SilaWay verfolgt eine <strong>Nulltoleranz</strong>-Politik gegenüber anstößigen oder missbräuchlichen Inhalten und missbräuchlichen Nutzern. Jeder Nutzer kann jede Nachricht im Chat <strong>melden (kennzeichnen)</strong> und andere Nutzer <strong>blockieren</strong> — die Inhalte eines blockierten Nutzers werden sofort aus Ihrem Feed entfernt und der Entwickler wird benachrichtigt. Gemeldete anstößige Inhalte werden <strong>innerhalb von 24 Stunden</strong> überprüft; wird ein Verstoß festgestellt, wird der Inhalt entfernt und der Nutzer, der ihn veröffentlicht hat, aus der App ausgeschlossen (Konto gesperrt/gekündigt).</div>
+
+      <h2>7. Kostenpflichtige Funktionen</h2>
+      <p>In dieser Version sind <strong>alle Funktionen der App kostenlos</strong>. Es gibt <strong>keine</strong> kostenpflichtigen Pakete, Abonnements oder In-App-Käufe (IAP); Ihnen werden niemals Kosten berechnet und es werden keine Zahlungsdaten verlangt. Sollten in Zukunft kostenpflichtige Funktionen hinzugefügt werden, werden diese Bedingungen aktualisiert und Sie werden im Voraus informiert.</p>
+
+      <h2>8. Apple-spezifische Bestimmungen</h2>
+      <p>Wenn Sie die App über den Apple App Store bezogen haben, gelten zusätzlich die folgenden Bestimmungen:</p>
+      <ul>
+        <li>Diese Vereinbarung besteht ausschließlich zwischen SilaWay und dem Nutzer; Apple Inc. ist keine Vertragspartei.</li>
+        <li>Wartung und Support der App liegen allein in der Verantwortung von SilaWay; Apple ist nicht verpflichtet, diese bereitzustellen.</li>
+        <li>Jegliches Nichtkonformität der App mit einer Garantie liegt allein in der Verantwortung von SilaWay; Apple gibt keine Garantie.</li>
+        <li>Ansprüche Dritter in Bezug auf geistiges Eigentum der App werden von SilaWay bearbeitet; Apple ist nicht verantwortlich.</li>
+        <li>Apple Inc. und seine Tochtergesellschaften sind <strong>Drittbegünstigte</strong> dieser Vereinbarung und können die Vereinbarung bei einem Verstoß direkt gegenüber dem Nutzer durchsetzen.</li>
+      </ul>
+
+      <h2>9. Haftungsbeschränkung</h2>
+      <ul>
+        <li>Die App wird „WIE BESEHEN" und „WIE VERFÜGBAR" bereitgestellt. SilaWay gibt keine ausdrücklichen oder stillschweigenden Garantien dafür, dass die App ununterbrochen, fehlerfrei oder für einen bestimmten Zweck geeignet ist.</li>
+        <li>Grenzwartezeiten, Wetter, Kraftstoffpreise, Kartendaten und KI-Ausgaben sind <strong>Schätzungen, dienen nur zu Informationszwecken und stellen keine offizielle Quelle dar</strong>. SilaWay haftet nicht für Schäden, die aus auf diesen Informationen beruhenden Entscheidungen entstehen.</li>
+        <li>Soweit gesetzlich zulässig, haftet SilaWay nicht für indirekte, beiläufige, besondere, Straf- oder Folgeschäden. Zwingende Verbraucherrechte bleiben vorbehalten.</li>
+      </ul>
+
+      <h2>10. Kündigung</h2>
+      <ul>
+        <li>Sie können Ihr Konto jederzeit in der App über „Konto löschen" beenden.</li>
+        <li>SilaWay behält sich das Recht vor, Ihr Konto bei Verstoß gegen diese Vereinbarung zu kündigen. Außer bei schwerwiegenden Verstößen (z. B. illegale Inhalte) wird vor einer Sperrung nach Möglichkeit eine angemessene Vorankündigung gegeben.</li>
+      </ul>
+
+      <h2>11. Höhere Gewalt</h2>
+      <p>SilaWay verstößt nicht gegen diese Vereinbarung, wenn der Dienst aufgrund von Umständen, die sich der angemessenen Kontrolle entziehen, vorübergehend nicht verfügbar ist, einschließlich Naturkatastrophen, Krieg, Pandemie, Ausfällen der Internet-Infrastruktur oder Unterbrechungen von Drittanbieterdiensten (Firebase, ein Drittanbieter für LLM, AMSS usw.).</p>
+
+      <h2>12. Salvatorische Klausel</h2>
+      <p>Sollte eine Bestimmung dieser Vereinbarung von einem zuständigen Gericht für ungültig erklärt werden, bleiben die übrigen Bestimmungen in vollem Umfang in Kraft.</p>
+
+      <h2>13. Anwendbares Recht und Gerichtsstand</h2>
+      <ul>
+        <li>Diese Vereinbarung unterliegt dem <strong>Recht der Republik Türkei</strong>.</li>
+        <li>Für Verbraucher mit Wohnsitz in der Türkei: Gemäß dem Verbraucherschutzgesetz Art. 73 können Verbraucherstreitigkeiten bei der <strong>Verbraucherschlichtungsstelle oder dem Verbrauchergericht Ihres Wohnortes</strong> beigelegt werden.</li>
+        <li>Für Verbraucher mit Wohnsitz in EU-Mitgliedstaaten: Zwingende Bestimmungen des Verbraucherschutzrechts Ihres Landes gemäß der EU-Richtlinie 2011/83/EU bleiben vorbehalten.</li>
+        <li>Für Nutzer, die keine Verbraucher sind, sind die Gerichte von Istanbul zuständig.</li>
+      </ul>
+
+      <h2>14. Gesamte Vereinbarung und Änderungen</h2>
+      <p>Diese Vereinbarung bildet zusammen mit der Datenschutzerklärung die gesamte Vereinbarung zwischen den Parteien. SilaWay behält sich das Recht vor, die Vereinbarung zu ändern; wesentliche Änderungen werden per In-App-Benachrichtigung oder E-Mail bekannt gegeben. Die fortgesetzte Nutzung der App nach einer solchen Benachrichtigung gilt als Annahme der Änderungen.</p>
+
+      <h2>15. Kontakt</h2>
+      <p>SilaWay<br>
+      <a href="mailto:destek@silaway.app">destek@silaway.app</a></p>
+    </div>
+
+    <!-- ───────────── NEDERLANDS ───────────── -->
+    <div class="nl">
+      <h1>Gebruiksvoorwaarden</h1>
+      <div class="meta">Versie 1.0.7 · Laatst bijgewerkt: 2026-06-16</div>
+
+      <div class="summary">
+        <div class="summary-label">Samenvatting (niet juridisch bindend)</div>
+        <p>• SilaWay is een gratis reisgenoot-app.</p>
+        <p>• Grenswachttijden zijn schattingen; raadpleeg voor officiële beslissingen het Ministerie van Handel.</p>
+        <p>• Als u de communityregels niet respecteert, kan uw account worden opgeschort.</p>
+        <p>• In deze versie zijn alle functies gratis; er zijn geen in-app-aankopen, abonnementen of premiumpakketten.</p>
+      </div>
+
+      <p>De onderstaande tekst is de volledige en bindende overeenkomst.</p>
+
+      <h2>1. Partijen</h2>
+      <p>Deze Gebruiksvoorwaarden ("Overeenkomst") worden gesloten tussen <strong>SilaWay</strong> ("Dienstverlener") en de natuurlijke persoon die de App gebruikt ("Gebruiker").</p>
+      <p>Door de App te installeren of te gebruiken, bevestigt u dat u deze Overeenkomst heeft gelezen, begrepen en geaccepteerd.</p>
+
+      <h2>2. Beschrijving van de dienst</h2>
+      <p>De App biedt diensten zoals schattingen van wachttijden bij grensovergangen, kaarten en routebeschrijvingen, weer, informatie over brandstofprijzen, live camerastreams (afkomstig van derden) en een community-chat.</p>
+      <p>Een aanzienlijk deel van de informatie is samengesteld uit bijdragen van gebruikers, open databronnen en API's van derden. <strong>De informatie is uitsluitend bedoeld ter informatie en is geen officiële bron.</strong> Baseer uw rij- en reisbeslissingen niet alleen op deze App; bevestig deze bij de betreffende douane en officiële autoriteiten.</p>
+
+      <h2>3. Leeftijdsbeperking</h2>
+      <p>U moet ten minste <strong>18 jaar oud</strong> zijn om de App te gebruiken. Gebruikers jonger dan 18 mogen de App niet gebruiken.</p>
+
+      <h2>4. Account en beveiliging</h2>
+      <ul>
+        <li>U bent verantwoordelijk voor de beveiliging van uw account. Als u onbevoegd gebruik van uw wachtwoord of sessie vermoedt, stel dan onmiddellijk <a href="mailto:destek@silaway.app">destek@silaway.app</a> op de hoogte.</li>
+        <li>Voor gast- en geregistreerde gebruikers gelden verschillende functies en limieten.</li>
+        <li>Het aanmaken van valse accounts, het zich voordoen als iemand anders, het gebruik van geautomatiseerde bots of het commercieel verkopen/overdragen van accounts is verboden.</li>
+        <li>Accounts die zijn aangemaakt met Apple's "Private Email Relay" worden <strong>niet als vals beschouwd</strong>; dit is een officiële privacyfunctie van Apple.</li>
+      </ul>
+
+      <h2>5. Aanvaardbaar gebruik</h2>
+      <p>Het is verboden de App te gebruiken om:</p>
+      <ul>
+        <li>Illegale, intimiderende, haatdragende, discriminerende of seksueel uitbuitende inhoud te delen</li>
+        <li>Spam, hardnekkige of ongewenste berichten naar andere gebruikers te sturen</li>
+        <li>De beveiligingsmaatregelen van de App te omzeilen, grote hoeveelheden geautomatiseerde verzoeken te sturen of API's van derden via de App te misbruiken</li>
+        <li><strong>Opzettelijk misleidende</strong> meldingen in te dienen (bijv. valse grenswachttijden)</li>
+        <li>De App te reverse-engineeren buiten het toepassingsgebied van de EU-Softwarerichtlijn 2009/24/EG Art. 5-6, of te proberen onbevoegd toegang te krijgen tot de broncode</li>
+      </ul>
+      <p>Overtredingen kunnen leiden tot opschorting of, afhankelijk van de ernst, beëindiging van uw account <strong>zonder voorafgaande kennisgeving</strong>. U kunt bezwaar maken tegen een beëindigingsbeslissing via <a href="mailto:destek@silaway.app">destek@silaway.app</a>.</p>
+
+      <h2>6. Gebruikersinhoud</h2>
+      <p>U behoudt het eigendom van de inhoud (berichten, afbeeldingen) die u plaatst in de chat en andere voor gebruikers zichtbare gebieden. U verleent SilaWay echter een <strong>niet-exclusieve, royaltyvrije, wereldwijde, sublicentieerbare licentie</strong> om die inhoud binnen de App weer te geven, op te slaan en te verzenden. Deze licentie blijft na accountverwijdering van kracht voor zover kopieën op de apparaten van andere gebruikers kunnen achterblijven.</p>
+      <p>Inhoud die de communityregels schendt, wordt verwijderd na meldingen van gebruikers of na moderatie.</p>
+      <div class="warn"><strong>NULTOLERANTIE VOOR AANSTOOTGEVENDE INHOUD:</strong> SilaWay hanteert een <strong>nultolerantie</strong>-beleid ten aanzien van aanstootgevende of beledigende inhoud en misbruikende gebruikers. Elke gebruiker kan elk bericht in de chat <strong>melden (markeren)</strong> en andere gebruikers <strong>blokkeren</strong> — de inhoud van een geblokkeerde gebruiker wordt onmiddellijk uit uw feed verwijderd en de ontwikkelaar wordt op de hoogte gesteld. Gemelde aanstootgevende inhoud wordt <strong>binnen 24 uur</strong> beoordeeld; als een overtreding wordt vastgesteld, wordt de inhoud verwijderd en wordt de gebruiker die deze heeft geplaatst uit de app verwijderd (account opgeschort/beëindigd).</div>
+
+      <h2>7. Betaalde functies</h2>
+      <p>In deze versie zijn <strong>alle functies in de app gratis</strong>. Er zijn <strong>geen</strong> betaalde pakketten, abonnementen of in-app-aankopen (IAP); u wordt nooit iets in rekening gebracht en er worden nooit betaalgegevens gevraagd. Als er in de toekomst betaalde functies worden toegevoegd, worden deze voorwaarden bijgewerkt en wordt u vooraf geïnformeerd.</p>
+
+      <h2>8. Apple-specifieke bepalingen</h2>
+      <p>Als u de App via de Apple App Store heeft verkregen, gelden ook de volgende bepalingen:</p>
+      <ul>
+        <li>Deze Overeenkomst is uitsluitend tussen SilaWay en de Gebruiker; Apple Inc. is geen partij.</li>
+        <li>Onderhoud en ondersteuning van de App zijn uitsluitend de verantwoordelijkheid van SilaWay; Apple is niet verplicht deze te leveren.</li>
+        <li>Elk niet-voldoen van de App aan enige garantie is uitsluitend de verantwoordelijkheid van SilaWay; Apple geeft geen garantie.</li>
+        <li>Claims van derden met betrekking tot intellectueel eigendom van de App worden door SilaWay afgehandeld; Apple is niet verantwoordelijk.</li>
+        <li>Apple Inc. en haar dochterondernemingen zijn <strong>derde-begunstigden</strong> van deze Overeenkomst en kunnen de Overeenkomst bij een schending rechtstreeks tegen de Gebruiker afdwingen.</li>
+      </ul>
+
+      <h2>9. Beperking van aansprakelijkheid</h2>
+      <ul>
+        <li>De App wordt geleverd "ZOALS HET IS" en "ZOALS BESCHIKBAAR". SilaWay geeft geen expliciete of impliciete garanties dat de App ononderbroken, foutloos of geschikt voor een bepaald doel zal zijn.</li>
+        <li>Grenswachttijden, weer, brandstofprijzen, kaartgegevens en AI-uitvoer zijn <strong>schattingen, uitsluitend bedoeld ter informatie en vormen geen officiële bron</strong>. SilaWay is niet aansprakelijk voor schade die voortvloeit uit beslissingen op basis van deze informatie.</li>
+        <li>Voor zover wettelijk toegestaan, is SilaWay niet aansprakelijk voor indirecte, incidentele, bijzondere, punitieve of gevolgschade. Dwingende consumentenrechten blijven voorbehouden.</li>
+      </ul>
+
+      <h2>10. Beëindiging</h2>
+      <ul>
+        <li>U kunt uw account op elk moment beëindigen vanuit de App ("Account verwijderen").</li>
+        <li>SilaWay behoudt zich het recht voor om uw account te beëindigen bij schending van deze Overeenkomst. Behalve bij ernstige schendingen (bijv. illegale inhoud) wordt waar mogelijk een redelijke voorafgaande kennisgeving gegeven vóór opschorting.</li>
+      </ul>
+
+      <h2>11. Overmacht</h2>
+      <p>SilaWay schendt deze Overeenkomst niet als de dienst tijdelijk niet beschikbaar is door omstandigheden die redelijkerwijs buiten haar controle liggen, waaronder natuurrampen, oorlog, pandemie, storingen in de internetinfrastructuur of onderbrekingen van diensten van derden (Firebase, een externe LLM-aanbieder, AMSS, enz.).</p>
+
+      <h2>12. Scheidbaarheid</h2>
+      <p>Indien een bepaling van deze Overeenkomst door een bevoegde rechtbank ongeldig wordt verklaard, blijven de overige bepalingen volledig van kracht.</p>
+
+      <h2>13. Toepasselijk recht en bevoegde rechtbank</h2>
+      <ul>
+        <li>Deze Overeenkomst wordt beheerst door het <strong>recht van de Republiek Türkiye</strong>.</li>
+        <li>Voor consumenten die in Turkije wonen: op grond van de Wet op de consumentenbescherming Art. 73 kunnen consumentengeschillen worden beslecht bij de <strong>consumentenarbitragecommissie of consumentenrechtbank van uw woonplaats</strong>.</li>
+        <li>Voor consumenten die in EU-lidstaten wonen: dwingende bepalingen van het consumentenrecht van uw land op grond van EU-Richtlijn 2011/83/EU blijven voorbehouden.</li>
+        <li>Voor niet-consumenten zijn de rechtbanken van Istanbul bevoegd.</li>
+      </ul>
+
+      <h2>14. Volledige overeenkomst en wijzigingen</h2>
+      <p>Deze Overeenkomst vormt samen met het Privacybeleid de volledige overeenkomst tussen de partijen. SilaWay behoudt zich het recht voor de Overeenkomst te wijzigen; belangrijke wijzigingen worden aangekondigd via een melding in de app of per e-mail. Voortgezet gebruik van de App na een dergelijke kennisgeving houdt aanvaarding van de wijzigingen in.</p>
+
+      <h2>15. Contact</h2>
+      <p>SilaWay<br>
+      <a href="mailto:destek@silaway.app">destek@silaway.app</a></p>
+    </div>
+
   </div>
 
   <footer>
@@ -347,7 +557,8 @@
   const tabs = document.querySelectorAll('.lang-tab');
   const content = document.querySelector('.content');
   const browserLang = (navigator.language || 'tr').slice(0, 2);
-  const defaultLang = browserLang === 'en' ? 'en' : 'tr';
+  const supported = ['tr', 'en', 'de', 'nl'];
+  const defaultLang = supported.includes(browserLang) ? browserLang : 'tr';
   setLang(defaultLang);
 
   tabs.forEach((tab) => {
