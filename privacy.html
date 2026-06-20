@@ -125,11 +125,8 @@
     font-size: 14px;
     margin: 10px 0;
   }
-  .content .tr, .content .en, .content .de, .content .nl { display: none; }
-  .content[data-lang="tr"] .tr,
-  .content[data-lang="en"] .en,
-  .content[data-lang="de"] .de,
-  .content[data-lang="nl"] .nl { display: block; }
+  .content[data-lang="en"] .tr { display: none; }
+  .content[data-lang="tr"] .en { display: none; }
   footer {
     margin-top: 48px;
     padding-top: 20px;
@@ -147,8 +144,6 @@
     <div class="lang-tabs" role="tablist">
       <button class="lang-tab active" data-lang="tr">TR</button>
       <button class="lang-tab" data-lang="en">EN</button>
-      <button class="lang-tab" data-lang="de">DE</button>
-      <button class="lang-tab" data-lang="nl">NL</button>
     </div>
   </header>
 
@@ -157,14 +152,14 @@
     <!-- ───────────── TÜRKÇE ───────────── -->
     <div class="tr">
       <h1>Gizlilik Politikası</h1>
-      <div class="meta">Versiyon 1.0.0 · Son güncelleme: 2026-05-14</div>
+      <div class="meta">Versiyon 1.0.7 · Son güncelleme: 2026-06-16</div>
 
       <div class="summary">
         <div class="summary-label">Özet (Hukuki Bağlayıcılığı Yoktur)</div>
-        <p>• SilaWay ("Uygulama") sınır geçiş süreleri, harita ve topluluk sohbeti sağlar.</p>
-        <p>• Yalnızca hizmetin çalışması için gereken verileri toplarız: hesap, konum, sohbet.</p>
+        <p>• SilaWay ("Uygulama") sınır geçiş süreleri, harita, navigasyon, sesli asistan ve topluluk sohbeti sağlar.</p>
+        <p>• Yalnızca hizmetin çalışması için gereken verileri toplarız: hesap, konum, sohbet ve (sesli asistanı kullanırsanız) ses.</p>
         <p>• Verileriniz reklam veya pazarlama amacıyla satılmaz.</p>
-        <p>• Hesabınızı uygulama içinden silebilirsiniz; veriler 30 gün içinde silinir.</p>
+        <p>• Hesabınızı uygulama içinden silebilirsiniz; verileriniz silme anında kaldırılır (teknik kopyalar en geç 30 gün içinde).</p>
         <p>• Sorular için: <a href="mailto:destek@silaway.app">destek@silaway.app</a></p>
       </div>
 
@@ -187,10 +182,12 @@
 
       <h3>(b) Konum Verileri</h3>
       <ul>
-        <li>Cihaz GPS koordinatları (yalnızca aktif sınır takibi sırasında)</li>
-        <li><strong>Amaç:</strong> sınır kapısına yaklaşıldığında uyarı; bekleme süresi hesabı</li>
+        <li>Cihaz GPS koordinatları (yalnızca aktif sınır takibi sırasında, cihazınızda işlenir)</li>
+        <li><strong>Amaç:</strong> sınır kapısına yaklaşıldığında uyarı; bekleme süresi hesabı; navigasyon</li>
         <li><strong>Hukuki dayanak:</strong> KVKK m.5/1 açık rıza · GDPR Art. 6(1)(a) consent</li>
         <li>Arka planda konum yalnızca kullanıcı "sınır takibini başlat" özelliğini etkinleştirdiğinde toplanır.</li>
+        <li><strong>Ham GPS koordinatlarınız SilaWay sunucularında saklanmaz.</strong> Yalnızca anonim bekleme süresi katkısı (hangi sınır kapısı + kaç dakika) sunucuya gönderilir; bu kayıt konumunuza veya kimliğinize geri bağlanamaz.</li>
+        <li>Navigasyon/harita (SilaAI) özelliğini kullandığınızda konum koordinatlarınız, rota çizimi ve harita görüntüleme için harita/rota sağlayıcılarına (Mapbox, TomTom — bkz. madde 3) anlık olarak iletilir; rota hesabı dışında saklanmaz.</li>
       </ul>
 
       <h3>(c) İçerik Verileri (Topluluk Sohbeti)</h3>
@@ -214,20 +211,42 @@
         <li>Misafir oturum için yalnızca anonim Firebase UID ve cihaz tabanlı kullanım sayaçları tutulur. Kişisel iletişim bilgisi alınmaz.</li>
       </ul>
 
+      <h3>(f) Ses Verileri (Sesli Asistan — SilaAI)</h3>
+      <ul>
+        <li>Sesli asistanla konuştuğunuzda kaydettiğiniz kısa ses klibi metne çevrilmek üzere işlenir; asistanın sesli yanıtı için de yanıt metni sese dönüştürülür.</li>
+        <li><strong>Amaç:</strong> konuşmanızı metne çevirme (STT) ve sesli yanıt üretme (TTS)</li>
+        <li><strong>Hukuki dayanak:</strong> KVKK m.5/1 açık rıza · GDPR Art. 6(1)(a) açık rıza (mikrofon izni; izni reddederseniz yalnız sesli özellik çalışmaz)</li>
+        <li>Ses klibiniz yalnızca anlık transkripsiyon için ilgili sağlayıcıya iletilir; tarafımızca veya sağlayıcı tarafından kalıcı saklanmaz ve yapay zekâ modeli eğitiminde kullanılmaz.</li>
+      </ul>
+
+      <h3>(g) Arama Sorguları (Sesli/Yazılı Asistan)</h3>
+      <ul>
+        <li>Asistanda bir yer tarif ettiğinizde ("şu marka benzinlik nerede" gibi) arama sorgunuz bir web arama sağlayıcısına iletilir.</li>
+        <li><strong>Amaç:</strong> tarif edilen yeri bulmak. Sorguyla birlikte kimlik veya konum bilginiz gönderilmez.</li>
+        <li><strong>Hukuki dayanak:</strong> GDPR Art. 6(1)(b) sözleşmenin ifası</li>
+      </ul>
+
       <h2>3. Üçüncü Taraf Hizmetleri</h2>
       <p>Hizmetin sağlanması için aşağıdaki işleyenler (data processors) kullanılır:</p>
       <ul>
         <li><strong>Google Firebase</strong> (Google LLC, ABD) — kimlik doğrulama, veritabanı, bildirim</li>
-        <li><strong>Google Maps Platform</strong> (Google LLC, ABD) — harita, yön tarifi</li>
+        <li><strong>Google Maps Platform</strong> (Google LLC, ABD) — harita, yön tarifi, yer arama (uygulama proxy'si üzerinden)</li>
+        <li><strong>Cloudflare, Inc.</strong> (ABD) — sunucu altyapısı (API proxy); sohbet/yapay zekâ istekleri bu proxy üzerinden iletilir. Mesaj metni saklanmaz</li>
         <li><strong>Open-Meteo</strong> (Bremen, AB) — hava durumu, kimlik bilgisi gönderilmez</li>
-        <li><strong>Anthropic PBC</strong> (ABD) — yapay zekâ asistanı; sohbet içeriği işlenir, model eğitiminde kullanılmaz (Anthropic Commercial Terms)</li>
-        <li><strong>AMSS — Auto-Moto Asocijacija Srbije</strong> (Sırbistan) — sınır kapısı kamera yayını cihazınıza aktarılır</li>
+        <li><strong>Üçüncü taraf LLM (yapay zekâ dil modeli) sağlayıcısı</strong> — sohbet içerik moderasyonu ve yapay zekâ asistanı; gönderdiğiniz mesaj/sohbet metni güvenlik denetimi ve yapay zekâ yanıtı üretmek için işlenir, model eğitiminde kullanılmaz. Sağlayıcının sunucu/veri konumu Türkiye/AB dışında (Çin dâhil) olabilir; yalnız yazdığınız metin gider (hesabınız/konumunuz gönderilmez).</li>
+        <li><strong>Groq, Inc.</strong> (ABD) — sesli asistanda konuşmanızın metne çevrilmesi (STT); gönderilen tek veri ses kaydınızdır, kalıcı saklanmaz</li>
+        <li><strong>Cartesia, Inc.</strong> (ABD) — sesli asistan yanıtının sese dönüştürülmesi (TTS); gönderilen tek veri yanıt metnidir</li>
+        <li><strong>Brave Software, Inc.</strong> (ABD) — asistanda tarif edilen yer için web araması; gönderilen tek veri arama sorgunuzdur (kimlik/konum gönderilmez)</li>
+        <li><strong>Mapbox, Inc.</strong> (ABD) — harita görüntüleme; harita karosu (tile) istekleri yaklaşık konumunuzu içerebilir</li>
+        <li><strong>TomTom International B.V.</strong> (Hollanda, AB) — rota hesaplama, trafik ve hız limiti; başlangıç/varış koordinatlarınız bu sağlayıcıya iletilir</li>
+        <li><strong>Geoapify GmbH</strong> (Almanya, AB) — yer/POI ve adres çözümleme (harita proxy'si üzerinden, önbellekli)</li>
+        <li><strong>AMSS — Auto-Moto Asocijacija Srbije</strong> (Sırbistan) — Avrupa sınır kapısı kamera yayını cihazınıza aktarılır</li>
         <li><strong>Apple Inc.</strong> (ABD) — yalnızca Apple ile giriş yaparsanız kimlik doğrulama sağlayıcısı</li>
       </ul>
       <p>Veriler reklam veya pazarlama amacıyla satılmaz veya paylaşılmaz.</p>
 
       <h2>4. Uluslararası Veri Aktarımı</h2>
-      <p>Firebase, Anthropic ve Google Maps gibi hizmetler nedeniyle verileriniz <strong>Türkiye ve AB dışına (özellikle ABD'ye)</strong> aktarılabilir. Bu aktarımlar:</p>
+      <p>Firebase ve Google Maps (ABD) ile üçüncü taraf LLM sağlayıcısı gibi hizmetler nedeniyle verileriniz <strong>Türkiye ve AB dışına (ABD ve Çin dâhil)</strong> aktarılabilir. Sohbet/yapay zekâ özelliklerini kullandığınızda mesaj metniniz üçüncü taraf LLM sağlayıcısına (konumu Çin'i içerebilir) iletilir. Sesli asistanı kullandığınızda ses kaydınız (Groq), yanıt metni (Cartesia) ve arama sorgunuz (Brave) ABD merkezli sağlayıcılara; navigasyonu kullandığınızda konum koordinatlarınız ABD (Mapbox) ve AB (TomTom) merkezli sağlayıcılara iletilir. Bu aktarımlar:</p>
       <ul>
         <li>KVKK m.9 kapsamında Kurul tarafından belirlenen güvenli ülkelere veya yeterli güvence sağlayan sözleşmelere dayanır.</li>
         <li>GDPR Art. 46(2)(c) kapsamında Standart Sözleşme Hükümleri (Standard Contractual Clauses) ile korunur.</li>
@@ -237,10 +256,10 @@
       <h2>5. Veri Saklama Süresi</h2>
       <ul>
         <li>Hesap verileri: hesabınız aktif olduğu sürece</li>
-        <li>Konum kayıtları: sınır geçişi tamamlanınca anonim toplu veriye dönüştürülür (max 30 gün ham hâlde)</li>
-        <li>Sohbet mesajları: 30 gün sonra otomatik silinir</li>
-        <li>Hata kayıtları (loglar): 90 gün</li>
-        <li>Hesap silindiğinde tüm kişisel veriler <strong>en geç 30 gün içinde</strong> silinir</li>
+        <li>Bekleme süresi katkıları: anonim toplu veri olarak hizmet sürdükçe saklanır (ham GPS koordinatı içermez)</li>
+        <li>Sohbet mesajları: hesabınız aktif olduğu sürece saklanır. Mesajları sohbet içinden ya da hesabınızı silerek kaldırabilirsiniz.</li>
+        <li>Hata kayıtları (loglar): tipik olarak 90 güne kadar</li>
+        <li>Hesabınızı sildiğinizde, hesabınıza bağlı tüm kişisel veriler (mesajlar, profil, görseller dâhil) <strong>silme anında</strong> kaldırılır; teknik kopyalar <strong>en geç 30 gün içinde</strong> temizlenir.</li>
       </ul>
 
       <h2>6. Haklarınız</h2>
@@ -267,13 +286,13 @@
       <p>Kişisel verilerinizi etkileyen bir güvenlik ihlali tespit edersek, GDPR Art. 33-34 ve KVKK m.12/5 uyarınca yetkili otoriteye <strong>72 saat içinde</strong> bildirim yapılır; ihlalden etkilenen kullanıcılara da uygulama içi bildirim veya e-posta ile haber verilir.</p>
 
       <h2>9. Çocukların Gizliliği</h2>
-      <p>Uygulama <strong>16 yaşın altındaki kullanıcılar için tasarlanmamıştır</strong>. GDPR Art. 8 uyarınca AB'de 16, KVKK uygulamasında ise reşit olmayanlar için veri işleme velinin onayına tabidir. Bilerek 16 yaş altı kullanıcı verisi toplamayız; tespit edersek silinir.</p>
+      <p>Uygulama <strong>18 yaşın altındaki kullanıcılar için tasarlanmamıştır</strong>. 18 yaşından küçükler uygulamayı kullanmamalıdır. KVKK ve GDPR uyarınca reşit olmayanların kişisel verilerinin işlenmesi ek koruma gerektirir; bilerek 18 yaş altı kullanıcı verisi toplamayız, tespit edersek sileriz.</p>
 
       <h2>10. Güvenlik</h2>
       <p>Verileriniz HTTPS/TLS ile şifreli olarak iletilir ve Google Cloud altyapısında saklanır. Yine de internet üzerinden hiçbir aktarımın %100 güvenli olmadığını hatırlatırız.</p>
 
       <h2>11. Politika Değişiklikleri</h2>
-      <p>Politikada önemli değişiklikler uygulama içi bildirim veya e-posta ile duyurulur. Versiyon numarası (1.0.0) ve "Son güncelleme" tarihi her revizyonda yenilenir.</p>
+      <p>Politikada önemli değişiklikler uygulama içi bildirim veya e-posta ile duyurulur. Versiyon numarası (1.0.7) ve "Son güncelleme" tarihi her revizyonda yenilenir.</p>
 
       <h2>12. İletişim</h2>
       <p>Veri sorumlusu: <strong>SilaWay</strong><br>
@@ -283,14 +302,14 @@
     <!-- ───────────── ENGLISH ───────────── -->
     <div class="en">
       <h1>Privacy Policy</h1>
-      <div class="meta">Version 1.0.0 · Last updated: 2026-05-14</div>
+      <div class="meta">Version 1.0.7 · Last updated: 2026-06-16</div>
 
       <div class="summary">
         <div class="summary-label">Summary (Not Legally Binding)</div>
-        <p>• SilaWay ("App") provides border wait times, maps, and community chat.</p>
-        <p>• We collect only the data needed to run the service: account, location, chat.</p>
+        <p>• SilaWay ("App") provides border wait times, maps, navigation, a voice assistant, and community chat.</p>
+        <p>• We collect only the data needed to run the service: account, location, chat, and (if you use the voice assistant) audio.</p>
         <p>• Your data is not sold for advertising or marketing.</p>
-        <p>• You can delete your account from within the app; data is removed within 30 days.</p>
+        <p>• You can delete your account from within the app; your data is removed at the moment of deletion (technical copies within 30 days at the latest).</p>
         <p>• Questions: <a href="mailto:destek@silaway.app">destek@silaway.app</a></p>
       </div>
 
@@ -313,10 +332,12 @@
 
       <h3>(b) Location Data</h3>
       <ul>
-        <li>Device GPS coordinates (only while active border tracking is on)</li>
-        <li><strong>Purpose:</strong> alerts when approaching a border crossing; wait time calculation</li>
+        <li>Device GPS coordinates (only while active border tracking is on, processed on your device)</li>
+        <li><strong>Purpose:</strong> alerts when approaching a border crossing; wait time calculation; navigation</li>
         <li><strong>Legal basis:</strong> KVKK Art. 5/1 explicit consent · GDPR Art. 6(1)(a) consent</li>
         <li>Background location is only collected when the user enables the "start border tracking" feature.</li>
+        <li><strong>Your raw GPS coordinates are not stored on SilaWay's servers.</strong> Only an anonymous wait-time contribution (which border + how many minutes) is sent to the server; this record cannot be linked back to your location or identity.</li>
+        <li>When you use the navigation/maps (SilaAI) feature, your location coordinates are sent in real time to map/routing providers (Mapbox, TomTom — see section 3) to draw the route and display the map; they are not retained by those providers beyond computing the route.</li>
       </ul>
 
       <h3>(c) Content Data (Community Chat)</h3>
@@ -340,20 +361,42 @@
         <li>For guest sessions only an anonymous Firebase UID and device-level usage counters are stored. No personal contact information is collected.</li>
       </ul>
 
+      <h3>(f) Audio Data (Voice Assistant — SilaAI)</h3>
+      <ul>
+        <li>When you speak to the voice assistant, the short audio clip you record is processed to convert it into text; the assistant's reply text is also converted into speech.</li>
+        <li><strong>Purpose:</strong> speech-to-text (STT) and text-to-speech (TTS)</li>
+        <li><strong>Legal basis:</strong> KVKK Art. 5/1 explicit consent · GDPR Art. 6(1)(a) consent (microphone permission; if you decline, only the voice feature is unavailable)</li>
+        <li>Your audio clip is transmitted to the relevant provider solely for real-time transcription; it is not retained by us or the provider and is not used to train AI models.</li>
+      </ul>
+
+      <h3>(g) Search Queries (Voice/Text Assistant)</h3>
+      <ul>
+        <li>When you describe a place to the assistant (e.g. "where is the nearest X-brand gas station"), your search query is sent to a web search provider.</li>
+        <li><strong>Purpose:</strong> to find the described place. No identity or location data is sent with the query.</li>
+        <li><strong>Legal basis:</strong> GDPR Art. 6(1)(b) performance of contract</li>
+      </ul>
+
       <h2>3. Third-Party Services</h2>
       <p>The following data processors are used to deliver the service:</p>
       <ul>
         <li><strong>Google Firebase</strong> (Google LLC, USA) — authentication, database, notifications</li>
-        <li><strong>Google Maps Platform</strong> (Google LLC, USA) — maps, directions</li>
+        <li><strong>Google Maps Platform</strong> (Google LLC, USA) — maps, directions, place search (via the app proxy)</li>
+        <li><strong>Cloudflare, Inc.</strong> (USA) — server infrastructure (API proxy); chat/AI requests are routed through this proxy. Message text is not stored</li>
         <li><strong>Open-Meteo</strong> (Bremen, EU) — weather; no identifiers sent</li>
-        <li><strong>Anthropic PBC</strong> (USA) — AI assistant; chat content is processed but is not used for model training (Anthropic Commercial Terms)</li>
-        <li><strong>AMSS — Auto-Moto Asocijacija Srbije</strong> (Serbia) — border camera streams delivered to your device</li>
+        <li><strong>A third-party LLM (AI language model) provider</strong> — chat content moderation and the AI assistant; the message/chat text you send is processed for a safety check and to generate AI replies, and is not used by us for model training. The provider's server/data location may be outside Turkey/the EU (including China); only the text you type is sent (your account/location is not sent).</li>
+        <li><strong>Groq, Inc.</strong> (USA) — speech-to-text for the voice assistant (STT); the only data sent is your audio recording, not retained</li>
+        <li><strong>Cartesia, Inc.</strong> (USA) — text-to-speech for the voice assistant's reply (TTS); the only data sent is the reply text</li>
+        <li><strong>Brave Software, Inc.</strong> (USA) — web search for a place described to the assistant; the only data sent is your search query (no identity/location)</li>
+        <li><strong>Mapbox, Inc.</strong> (USA) — map display; map tile requests may include your approximate location</li>
+        <li><strong>TomTom International B.V.</strong> (Netherlands, EU) — route calculation, traffic, and speed limits; your origin/destination coordinates are sent to this provider</li>
+        <li><strong>Geoapify GmbH</strong> (Germany, EU) — place/POI and address lookup (via the maps proxy, cached)</li>
+        <li><strong>AMSS — Auto-Moto Asocijacija Srbije</strong> (Serbia) — European border camera streams delivered to your device</li>
         <li><strong>Apple Inc.</strong> (USA) — only if you sign in with Apple, as an identity provider</li>
       </ul>
       <p>Your data is not sold or shared for advertising or marketing.</p>
 
       <h2>4. International Data Transfers</h2>
-      <p>Due to providers such as Firebase, Anthropic, and Google Maps, your data may be transferred <strong>outside Turkey and the EU (primarily to the USA)</strong>. These transfers are protected:</p>
+      <p>Due to providers such as Firebase and Google Maps (USA) and a third-party LLM provider, your data may be transferred <strong>outside Turkey and the EU (including the USA and China)</strong>. When you use chat/AI features, your message text is sent to a third-party LLM provider (whose location may include China). When you use the voice assistant, your audio recording (Groq), reply text (Cartesia), and search query (Brave) are sent to USA-based providers; when you use navigation, your location coordinates are sent to USA-based (Mapbox) and EU-based (TomTom) providers. These transfers are protected:</p>
       <ul>
         <li>Under KVKK Art. 9, by transfers to countries deemed adequate by the Turkish DPA or by contracts providing sufficient guarantees.</li>
         <li>Under GDPR Art. 46(2)(c), by the EU Standard Contractual Clauses.</li>
@@ -363,10 +406,10 @@
       <h2>5. Retention Periods</h2>
       <ul>
         <li>Account data: as long as your account is active</li>
-        <li>Location records: converted to anonymous aggregated data after a border crossing is completed (raw form max 30 days)</li>
-        <li>Chat messages: automatically deleted after 30 days</li>
-        <li>Error logs: 90 days</li>
-        <li>When you delete your account, all personal data is removed <strong>within 30 days at the latest</strong></li>
+        <li>Wait-time contributions: kept as anonymous aggregated data for as long as the service runs (contains no raw GPS coordinates)</li>
+        <li>Chat messages: retained while your account is active. You can remove messages from within chat or by deleting your account.</li>
+        <li>Error logs: typically up to 90 days</li>
+        <li>When you delete your account, all personal data linked to it (including messages, profile, images) is removed <strong>at the moment of deletion</strong>; technical copies are cleared <strong>within 30 days at the latest</strong>.</li>
       </ul>
 
       <h2>6. Your Rights</h2>
@@ -393,269 +436,17 @@
       <p>If we detect a security breach affecting your personal data, we will notify the competent supervisory authority <strong>within 72 hours</strong> as required by GDPR Art. 33-34 and KVKK Art. 12/5, and we will inform affected users via in-app notification or email.</p>
 
       <h2>9. Children's Privacy</h2>
-      <p>The App is <strong>not designed for users under 16 years of age</strong>. Under GDPR Art. 8 the minimum age in the EU is 16; in Turkey under KVKK, processing of minors' data requires parental consent. We do not knowingly collect data from users under 16; if discovered, such data is deleted.</p>
+      <p>The App is <strong>not designed for users under 18 years of age</strong>. Users under 18 must not use the App. Under KVKK and GDPR, processing the personal data of minors requires additional protection; we do not knowingly collect data from users under 18, and such data is deleted if discovered.</p>
 
       <h2>10. Security</h2>
       <p>Your data is transmitted over HTTPS/TLS and stored on Google Cloud infrastructure. However, no method of transmission over the internet can be guaranteed to be 100% secure.</p>
 
       <h2>11. Policy Changes</h2>
-      <p>Significant changes to this policy will be announced via in-app notification or email. The version number (1.0.0) and "Last updated" date are updated with each revision.</p>
+      <p>Significant changes to this policy will be announced via in-app notification or email. The version number (1.0.7) and "Last updated" date are updated with each revision.</p>
 
       <h2>12. Contact</h2>
       <p>Data controller: <strong>SilaWay</strong><br>
       Email: <a href="mailto:destek@silaway.app">destek@silaway.app</a></p>
-    </div>
-
-    <!-- ───────────── DEUTSCH ───────────── -->
-    <div class="de">
-      <h1>Datenschutzerklärung</h1>
-      <div class="meta">Version 1.0.0 · Zuletzt aktualisiert: 2026-05-14</div>
-
-      <div class="summary">
-        <div class="summary-label">Zusammenfassung (Rechtlich nicht bindend)</div>
-        <p>• SilaWay ("App") bietet Grenzwartezeiten, Karten und einen Community-Chat.</p>
-        <p>• Wir erheben nur die Daten, die für den Betrieb des Dienstes erforderlich sind: Konto, Standort, Chat.</p>
-        <p>• Ihre Daten werden nicht für Werbe- oder Marketingzwecke verkauft.</p>
-        <p>• Sie können Ihr Konto in der App löschen; die Daten werden innerhalb von 30 Tagen entfernt.</p>
-        <p>• Fragen: <a href="mailto:destek@silaway.app">destek@silaway.app</a></p>
-      </div>
-
-      <p>Der nachstehende Text ist die vollständige und verbindliche Erklärung.</p>
-
-      <h2>1. Verantwortlicher</h2>
-      <p>Verantwortlicher: <strong>SilaWay</strong> (Betreiber der App).</p>
-      <p>Kontakt: <a href="mailto:destek@silaway.app">destek@silaway.app</a></p>
-      <p>SilaWay ist Verantwortlicher im Sinne des türkischen Datenschutzgesetzes (KVKK Nr. 6698) und der EU-Datenschutz-Grundverordnung 2016/679 (DSGVO).</p>
-
-      <h2>2. Verarbeitete personenbezogene Daten und Rechtsgrundlage</h2>
-      <p>Die folgenden Kategorien werden zu den angegebenen Zwecken auf Grundlage der in KVKK Art. 5 und DSGVO Art. 6 genannten Rechtsgrundlagen verarbeitet:</p>
-
-      <h3>(a) Identitäts- und Kontaktdaten</h3>
-      <ul>
-        <li>Name, E-Mail, Profilfoto (werden vom Anbieter übermittelt, wenn Sie sich mit Google oder Apple anmelden)</li>
-        <li><strong>Zweck:</strong> Kontoerstellung, Sitzungsfortführung</li>
-        <li><strong>Rechtsgrundlage:</strong> KVKK Art. 5/2(c) Vertragserfüllung · DSGVO Art. 6(1)(b) Vertrag</li>
-      </ul>
-
-      <h3>(b) Standortdaten</h3>
-      <ul>
-        <li>GPS-Koordinaten des Geräts (nur während die aktive Grenzverfolgung eingeschaltet ist)</li>
-        <li><strong>Zweck:</strong> Hinweise bei Annäherung an einen Grenzübergang; Berechnung der Wartezeit</li>
-        <li><strong>Rechtsgrundlage:</strong> KVKK Art. 5/1 ausdrückliche Einwilligung · DSGVO Art. 6(1)(a) Einwilligung</li>
-        <li>Standortdaten im Hintergrund werden nur erhoben, wenn der Nutzer die Funktion „Grenzverfolgung starten" aktiviert.</li>
-      </ul>
-
-      <h3>(c) Inhaltsdaten (Community-Chat)</h3>
-      <ul>
-        <li>Von Ihnen im Chat verfasste Nachrichten, Ihr Spitzname, Zeitstempel der Nachrichten</li>
-        <li><strong>Zweck:</strong> Ermöglichung der Kommunikation innerhalb der Community</li>
-        <li><strong>Rechtsgrundlage:</strong> DSGVO Art. 6(1)(b) Vertrag + Art. 6(1)(f) berechtigtes Interesse (Inhaltsmoderation)</li>
-      </ul>
-      <div class="warn"><strong>WARNUNG:</strong> Im Chat veröffentlichte Inhalte sind öffentlich und für andere Nutzer sichtbar. Einmal gesendete Nachrichten können als Kopien auf den Geräten anderer Nutzer verbleiben.</div>
-
-      <h3>(d) Geräte- und Nutzungsdaten</h3>
-      <ul>
-        <li>Gerätekennung (Firebase Installation ID), Bildschirmaufrufe, Fehlerprotokolle</li>
-        <li>Diese Daten identifizieren Sie für sich genommen nicht, sind jedoch <strong>nicht anonym</strong> — sie sind pseudonymisiert (ggf. mit Ihrem Konto verknüpft).</li>
-        <li><strong>Zweck:</strong> Dienstqualität, Fehlerdiagnose, Missbrauchserkennung</li>
-        <li><strong>Rechtsgrundlage:</strong> DSGVO Art. 6(1)(f) berechtigtes Interesse</li>
-      </ul>
-
-      <h3>(e) Gastnutzer</h3>
-      <ul>
-        <li>Für Gastsitzungen werden nur eine anonyme Firebase-UID und gerätebezogene Nutzungszähler gespeichert. Es werden keine persönlichen Kontaktdaten erhoben.</li>
-      </ul>
-
-      <h2>3. Dienste von Drittanbietern</h2>
-      <p>Zur Bereitstellung des Dienstes werden folgende Auftragsverarbeiter eingesetzt:</p>
-      <ul>
-        <li><strong>Google Firebase</strong> (Google LLC, USA) — Authentifizierung, Datenbank, Benachrichtigungen</li>
-        <li><strong>Google Maps Platform</strong> (Google LLC, USA) — Karten, Wegbeschreibungen</li>
-        <li><strong>Open-Meteo</strong> (Bremen, EU) — Wetter; es werden keine Kennungen übermittelt</li>
-        <li><strong>Anthropic PBC</strong> (USA) — KI-Assistent; Chat-Inhalte werden verarbeitet, jedoch nicht zum Modelltraining verwendet (Anthropic Commercial Terms)</li>
-        <li><strong>AMSS — Auto-Moto Asocijacija Srbije</strong> (Serbien) — Kamerastreams der Grenzübergänge werden an Ihr Gerät übertragen</li>
-        <li><strong>Apple Inc.</strong> (USA) — nur wenn Sie sich mit Apple anmelden, als Identitätsanbieter</li>
-      </ul>
-      <p>Ihre Daten werden nicht für Werbe- oder Marketingzwecke verkauft oder weitergegeben.</p>
-
-      <h2>4. Internationale Datenübermittlung</h2>
-      <p>Aufgrund von Anbietern wie Firebase, Anthropic und Google Maps können Ihre Daten <strong>außerhalb der Türkei und der EU (vor allem in die USA)</strong> übermittelt werden. Diese Übermittlungen sind geschützt:</p>
-      <ul>
-        <li>Gemäß KVKK Art. 9 durch Übermittlungen in von der türkischen Datenschutzbehörde als angemessen eingestufte Länder oder durch Verträge mit ausreichenden Garantien.</li>
-        <li>Gemäß DSGVO Art. 46(2)(c) durch die EU-Standardvertragsklauseln.</li>
-      </ul>
-      <p>Einzelheiten entnehmen Sie bitte den Datenschutzerklärungen der jeweiligen Anbieter.</p>
-
-      <h2>5. Speicherfristen</h2>
-      <ul>
-        <li>Kontodaten: solange Ihr Konto aktiv ist</li>
-        <li>Standortdatensätze: werden nach Abschluss eines Grenzübergangs in anonyme aggregierte Daten umgewandelt (Rohform max. 30 Tage)</li>
-        <li>Chat-Nachrichten: werden nach 30 Tagen automatisch gelöscht</li>
-        <li>Fehlerprotokolle: 90 Tage</li>
-        <li>Wenn Sie Ihr Konto löschen, werden alle personenbezogenen Daten <strong>spätestens innerhalb von 30 Tagen</strong> entfernt</li>
-      </ul>
-
-      <h2>6. Ihre Rechte</h2>
-      <p>Gemäß KVKK Art. 11 und DSGVO Art. 15-22 haben Sie das Recht auf:</p>
-      <ul>
-        <li>Auskunft über Ihre Daten</li>
-        <li>Berichtigung oder Löschung</li>
-        <li>Einschränkung der Verarbeitung</li>
-        <li>Widerspruch gegen die Verarbeitung</li>
-        <li>Datenübertragbarkeit</li>
-        <li>Widerruf der Einwilligung (für die Zukunft)</li>
-        <li>dauerhafte Löschung Ihres Kontos in der App („Einstellungen &gt; Konto löschen")</li>
-      </ul>
-      <p>Anfragen können Sie schriftlich an <a href="mailto:destek@silaway.app">destek@silaway.app</a> richten. Gemäß KVKK Art. 13 werden Anfragen <strong>spätestens innerhalb von 30 Tagen</strong> beantwortet.</p>
-
-      <h2>7. Beschwerderecht</h2>
-      <p>Wenn Sie der Ansicht sind, dass die Verarbeitung rechtswidrig ist, können Sie Beschwerde einlegen bei:</p>
-      <ul>
-        <li><strong>Türkei:</strong> Datenschutzbehörde (<a href="https://kvkk.gov.tr">kvkk.gov.tr</a>)</li>
-        <li><strong>EU-Mitgliedstaaten:</strong> der Aufsichtsbehörde Ihres Wohnsitzlandes (z. B. Deutschland BfDI, Niederlande AP, Österreich DSB)</li>
-      </ul>
-
-      <h2>8. Meldung von Datenschutzverletzungen</h2>
-      <p>Wenn wir eine Sicherheitsverletzung feststellen, die Ihre personenbezogenen Daten betrifft, benachrichtigen wir die zuständige Aufsichtsbehörde <strong>innerhalb von 72 Stunden</strong> gemäß DSGVO Art. 33-34 und KVKK Art. 12/5 und informieren betroffene Nutzer per In-App-Benachrichtigung oder E-Mail.</p>
-
-      <h2>9. Datenschutz von Kindern</h2>
-      <p>Die App ist <strong>nicht für Nutzer unter 16 Jahren bestimmt</strong>. Gemäß DSGVO Art. 8 liegt das Mindestalter in der EU bei 16 Jahren; in der Türkei erfordert die Verarbeitung von Daten Minderjähriger nach KVKK die Zustimmung der Erziehungsberechtigten. Wir erheben nicht wissentlich Daten von Nutzern unter 16 Jahren; werden solche festgestellt, werden sie gelöscht.</p>
-
-      <h2>10. Sicherheit</h2>
-      <p>Ihre Daten werden über HTTPS/TLS verschlüsselt übertragen und auf der Google-Cloud-Infrastruktur gespeichert. Dennoch kann keine Übertragungsmethode über das Internet zu 100 % sicher sein.</p>
-
-      <h2>11. Änderungen der Erklärung</h2>
-      <p>Wesentliche Änderungen dieser Erklärung werden per In-App-Benachrichtigung oder E-Mail bekannt gegeben. Die Versionsnummer (1.0.0) und das Datum „Zuletzt aktualisiert" werden bei jeder Überarbeitung aktualisiert.</p>
-
-      <h2>12. Kontakt</h2>
-      <p>Verantwortlicher: <strong>SilaWay</strong><br>
-      E-Mail: <a href="mailto:destek@silaway.app">destek@silaway.app</a></p>
-    </div>
-
-    <!-- ───────────── NEDERLANDS ───────────── -->
-    <div class="nl">
-      <h1>Privacybeleid</h1>
-      <div class="meta">Versie 1.0.0 · Laatst bijgewerkt: 2026-05-14</div>
-
-      <div class="summary">
-        <div class="summary-label">Samenvatting (Niet juridisch bindend)</div>
-        <p>• SilaWay ("App") biedt wachttijden bij grensovergangen, kaarten en een community-chat.</p>
-        <p>• We verzamelen alleen de gegevens die nodig zijn om de dienst te laten werken: account, locatie, chat.</p>
-        <p>• Uw gegevens worden niet verkocht voor advertentie- of marketingdoeleinden.</p>
-        <p>• U kunt uw account in de app verwijderen; gegevens worden binnen 30 dagen verwijderd.</p>
-        <p>• Vragen: <a href="mailto:destek@silaway.app">destek@silaway.app</a></p>
-      </div>
-
-      <p>De onderstaande tekst is het volledige en bindende beleid.</p>
-
-      <h2>1. Verwerkingsverantwoordelijke</h2>
-      <p>Verwerkingsverantwoordelijke: <strong>SilaWay</strong> (de exploitant van de App).</p>
-      <p>Contact: <a href="mailto:destek@silaway.app">destek@silaway.app</a></p>
-      <p>SilaWay is de verwerkingsverantwoordelijke in de zin van de Turkse wet inzake de bescherming van persoonsgegevens (KVKK nr. 6698) en de Algemene Verordening Gegevensbescherming 2016/679 van de EU (AVG).</p>
-
-      <h2>2. Verwerkte persoonsgegevens en rechtsgrond</h2>
-      <p>De volgende categorieën worden verwerkt voor de genoemde doeleinden, op de rechtsgronden vermeld in KVKK art. 5 en AVG art. 6:</p>
-
-      <h3>(a) Identiteits- en contactgegevens</h3>
-      <ul>
-        <li>Naam, e-mail, profielfoto (door de aanbieder gedeeld wanneer u zich aanmeldt met Google of Apple)</li>
-        <li><strong>Doel:</strong> account aanmaken, sessiecontinuïteit</li>
-        <li><strong>Rechtsgrond:</strong> KVKK art. 5/2(c) uitvoering van de overeenkomst · AVG art. 6(1)(b) overeenkomst</li>
-      </ul>
-
-      <h3>(b) Locatiegegevens</h3>
-      <ul>
-        <li>GPS-coördinaten van het apparaat (alleen terwijl actieve grensvolging is ingeschakeld)</li>
-        <li><strong>Doel:</strong> meldingen bij het naderen van een grensovergang; berekening van de wachttijd</li>
-        <li><strong>Rechtsgrond:</strong> KVKK art. 5/1 uitdrukkelijke toestemming · AVG art. 6(1)(a) toestemming</li>
-        <li>Locatie op de achtergrond wordt alleen verzameld wanneer de gebruiker de functie "grensvolging starten" inschakelt.</li>
-      </ul>
-
-      <h3>(c) Inhoudsgegevens (community-chat)</h3>
-      <ul>
-        <li>Berichten die u in de chat schrijft, uw bijnaam, tijdstempels van berichten</li>
-        <li><strong>Doel:</strong> communicatie binnen de community mogelijk maken</li>
-        <li><strong>Rechtsgrond:</strong> AVG art. 6(1)(b) overeenkomst + art. 6(1)(f) gerechtvaardigd belang (inhoudsmoderatie)</li>
-      </ul>
-      <div class="warn"><strong>WAARSCHUWING:</strong> Inhoud die in de chat wordt geplaatst, is openbaar en zichtbaar voor andere gebruikers. Eenmaal verzonden berichten kunnen als kopie achterblijven op de apparaten van andere gebruikers.</div>
-
-      <h3>(d) Apparaat- en gebruiksgegevens</h3>
-      <ul>
-        <li>Apparaat-identificator (Firebase Installation ID), schermbezoeken, foutlogboeken</li>
-        <li>Deze gegevens identificeren u op zichzelf niet, maar zijn <strong>niet anoniem</strong> — ze zijn gepseudonimiseerd (waar van toepassing aan uw account gekoppeld).</li>
-        <li><strong>Doel:</strong> prestaties van de dienst, foutdiagnose, misbruikdetectie</li>
-        <li><strong>Rechtsgrond:</strong> AVG art. 6(1)(f) gerechtvaardigd belang</li>
-      </ul>
-
-      <h3>(e) Gastgebruikers</h3>
-      <ul>
-        <li>Voor gastsessies worden alleen een anonieme Firebase-UID en gebruikstellers op apparaatniveau opgeslagen. Er worden geen persoonlijke contactgegevens verzameld.</li>
-      </ul>
-
-      <h2>3. Diensten van derden</h2>
-      <p>Voor het leveren van de dienst worden de volgende verwerkers ingezet:</p>
-      <ul>
-        <li><strong>Google Firebase</strong> (Google LLC, VS) — authenticatie, database, meldingen</li>
-        <li><strong>Google Maps Platform</strong> (Google LLC, VS) — kaarten, routebeschrijvingen</li>
-        <li><strong>Open-Meteo</strong> (Bremen, EU) — weer; er worden geen identificatoren verzonden</li>
-        <li><strong>Anthropic PBC</strong> (VS) — AI-assistent; chatinhoud wordt verwerkt maar niet gebruikt voor het trainen van modellen (Anthropic Commercial Terms)</li>
-        <li><strong>AMSS — Auto-Moto Asocijacija Srbije</strong> (Servië) — camerabeelden van grensovergangen worden naar uw apparaat gestreamd</li>
-        <li><strong>Apple Inc.</strong> (VS) — alleen als u zich aanmeldt met Apple, als identiteitsaanbieder</li>
-      </ul>
-      <p>Uw gegevens worden niet verkocht of gedeeld voor advertentie- of marketingdoeleinden.</p>
-
-      <h2>4. Internationale gegevensoverdracht</h2>
-      <p>Vanwege aanbieders zoals Firebase, Anthropic en Google Maps kunnen uw gegevens worden overgedragen <strong>buiten Turkije en de EU (voornamelijk naar de VS)</strong>. Deze overdrachten zijn beschermd:</p>
-      <ul>
-        <li>Op grond van KVKK art. 9, door overdrachten naar landen die door de Turkse toezichthouder als passend worden beschouwd of door contracten met voldoende waarborgen.</li>
-        <li>Op grond van AVG art. 46(2)(c), door de EU-modelcontractbepalingen.</li>
-      </ul>
-      <p>Raadpleeg voor meer informatie de privacyverklaringen van de aanbieders zelf.</p>
-
-      <h2>5. Bewaartermijnen</h2>
-      <ul>
-        <li>Accountgegevens: zolang uw account actief is</li>
-        <li>Locatiegegevens: worden na voltooiing van een grensovergang omgezet in anonieme geaggregeerde gegevens (ruwe vorm max. 30 dagen)</li>
-        <li>Chatberichten: worden na 30 dagen automatisch verwijderd</li>
-        <li>Foutlogboeken: 90 dagen</li>
-        <li>Wanneer u uw account verwijdert, worden alle persoonsgegevens <strong>uiterlijk binnen 30 dagen</strong> verwijderd</li>
-      </ul>
-
-      <h2>6. Uw rechten</h2>
-      <p>Op grond van KVKK art. 11 en AVG art. 15-22 hebt u het recht om:</p>
-      <ul>
-        <li>uw gegevens in te zien</li>
-        <li>correctie of verwijdering te verzoeken</li>
-        <li>de verwerking te beperken</li>
-        <li>bezwaar te maken tegen de verwerking</li>
-        <li>gegevensoverdraagbaarheid uit te oefenen</li>
-        <li>uw toestemming in te trekken (voor de toekomst)</li>
-        <li>uw account permanent te verwijderen in de app ("Instellingen &gt; Account verwijderen")</li>
-      </ul>
-      <p>U kunt verzoeken schriftelijk richten aan <a href="mailto:destek@silaway.app">destek@silaway.app</a>. Op grond van KVKK art. 13 worden verzoeken <strong>uiterlijk binnen 30 dagen</strong> beantwoord.</p>
-
-      <h2>7. Recht om een klacht in te dienen</h2>
-      <p>Als u van mening bent dat de verwerking onrechtmatig is, kunt u een klacht indienen bij:</p>
-      <ul>
-        <li><strong>Turkije:</strong> Autoriteit voor de bescherming van persoonsgegevens (<a href="https://kvkk.gov.tr">kvkk.gov.tr</a>)</li>
-        <li><strong>EU-lidstaten:</strong> de toezichthoudende autoriteit in uw land van verblijf (bijv. Duitsland BfDI, Nederland AP, Oostenrijk DSB)</li>
-      </ul>
-
-      <h2>8. Melding van datalekken</h2>
-      <p>Als we een beveiligingsinbreuk vaststellen die uw persoonsgegevens treft, stellen we de bevoegde toezichthoudende autoriteit <strong>binnen 72 uur</strong> op de hoogte zoals vereist door AVG art. 33-34 en KVKK art. 12/5, en informeren we getroffen gebruikers via een melding in de app of per e-mail.</p>
-
-      <h2>9. Privacy van kinderen</h2>
-      <p>De App is <strong>niet bedoeld voor gebruikers jonger dan 16 jaar</strong>. Op grond van AVG art. 8 is de minimumleeftijd in de EU 16 jaar; in Turkije vereist de verwerking van gegevens van minderjarigen op grond van KVKK toestemming van de ouders. We verzamelen niet bewust gegevens van gebruikers jonger dan 16 jaar; worden deze ontdekt, dan worden ze verwijderd.</p>
-
-      <h2>10. Beveiliging</h2>
-      <p>Uw gegevens worden via HTTPS/TLS versleuteld verzonden en opgeslagen op de Google Cloud-infrastructuur. Geen enkele methode van overdracht via internet kan echter voor 100% veilig worden gegarandeerd.</p>
-
-      <h2>11. Wijzigingen van het beleid</h2>
-      <p>Belangrijke wijzigingen van dit beleid worden aangekondigd via een melding in de app of per e-mail. Het versienummer (1.0.0) en de datum "Laatst bijgewerkt" worden bij elke herziening bijgewerkt.</p>
-
-      <h2>12. Contact</h2>
-      <p>Verwerkingsverantwoordelijke: <strong>SilaWay</strong><br>
-      E-mail: <a href="mailto:destek@silaway.app">destek@silaway.app</a></p>
     </div>
 
   </div>
@@ -669,7 +460,7 @@
   const tabs = document.querySelectorAll('.lang-tab');
   const content = document.querySelector('.content');
   const browserLang = (navigator.language || 'tr').slice(0, 2);
-  const defaultLang = ['tr', 'en', 'de', 'nl'].includes(browserLang) ? browserLang : 'tr';
+  const defaultLang = browserLang === 'en' ? 'en' : 'tr';
   setLang(defaultLang);
 
   tabs.forEach((tab) => {

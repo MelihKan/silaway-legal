@@ -6,6 +6,7 @@ SilaWay mobil uygulamasının resmi yasal belgeleri.
 
 - **[Gizlilik Politikası](./privacy)** — Topladığımız veriler, kullanım amaçları ve haklarınız
 - **[Kullanım Koşulları](./terms)** — Uygulamayı kullanım kuralları
+- **[Hesap ve Veri Silme](./delete-account.html)** — Hesabınızı nasıl silersiniz
 
 ## İletişim
 

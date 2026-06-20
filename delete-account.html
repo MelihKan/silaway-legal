@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SilaWay — Hesap Silme / Delete Account</title>
+<meta name="description" content="How to delete your SilaWay account and associated data.">
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --surface: #1a1a1a;
+    --text: #f0f0f0;
+    --muted: #999;
+    --accent: #FF6B00;
+    --border: #2a2a2a;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65;
+    padding: 24px 16px 60px;
+  }
+  .container { max-width: 760px; margin: 0 auto; }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0 24px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 24px;
+  }
+  .logo {
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+  }
+  .lang-tabs {
+    display: inline-flex;
+    background: var(--surface);
+    border-radius: 10px;
+    padding: 4px;
+    gap: 2px;
+  }
+  .lang-tab {
+    background: transparent;
+    border: 0;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .lang-tab.active { background: var(--accent); color: #fff; }
+  h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 24px;
+  }
+  .summary {
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    padding: 16px 18px;
+    border-radius: 10px;
+    margin-bottom: 28px;
+  }
+  .summary-label {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .summary p { font-size: 14px; color: #ccc; margin-bottom: 4px; }
+  h2 {
+    font-size: 15px;
+    color: var(--accent);
+    margin-top: 32px;
+    margin-bottom: 12px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+  }
+  h3 {
+    font-size: 14px;
+    color: #ddd;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  p, ul, ol { margin-bottom: 12px; color: #d8d8d8; font-size: 15px; }
+  ul, ol { list-style: none; padding-left: 0; }
+  ul li, ol li {
+    padding-left: 18px;
+    position: relative;
+    margin-bottom: 6px;
+  }
+  ul li::before { content: "•"; position: absolute; left: 4px; color: var(--accent); }
+  ol { counter-reset: item; }
+  ol li {
+    padding-left: 28px;
+  }
+  ol li::before {
+    content: counter(item) ".";
+    counter-increment: item;
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  a { color: var(--accent); }
+  .warn {
+    background: rgba(255, 107, 0, 0.08);
+    border: 1px solid rgba(255, 107, 0, 0.3);
+    color: #ffb380;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  .content[data-lang="en"] .tr { display: none; }
+  .content[data-lang="tr"] .en { display: none; }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <a href="./" class="logo">SilaWay</a>
+    <div class="lang-tabs" role="tablist">
+      <button class="lang-tab active" data-lang="tr">TR</button>
+      <button class="lang-tab" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <div class="content" data-lang="tr">
+
+    <!-- ───────────── TÜRKÇE ───────────── -->
+    <div class="tr">
+      <h1>Hesap ve Veri Silme</h1>
+      <div class="meta">Uygulama: SilaWay (com.silaway.app) · Geliştirici: SilaWay · Son güncelleme: 2026-06-21</div>
+
+      <div class="summary">
+        <div class="summary-label">Özet</div>
+        <p>• Hesabınızı doğrudan uygulama içinden kalıcı olarak silebilirsiniz.</p>
+        <p>• Uygulamaya erişiminiz yoksa <a href="mailto:destek@silaway.app">destek@silaway.app</a> adresine yazarak silme talep edebilirsiniz.</p>
+        <p>• Hesabınızla ilişkili kişisel veriler silme anında kaldırılır; teknik yedek kopyalar en geç 30 gün içinde temizlenir.</p>
+      </div>
+
+      <h2>1. Uygulama İçinden Silme (Önerilen)</h2>
+      <p>Hesabınızı ve ona bağlı tüm verileri kendiniz silmek için:</p>
+      <ol>
+        <li>SilaWay uygulamasını açın ve hesabınızla giriş yapın.</li>
+        <li><strong>Ayarlar</strong> ekranına gidin.</li>
+        <li><strong>Hesabı Sil</strong> seçeneğine dokunun.</li>
+        <li>Güvenlik için kimliğinizi yeniden doğrulayın (yeniden giriş) ve onaylayın.</li>
+      </ol>
+      <p>İşlem tamamlandığında hesabınız ve kişisel verileriniz kalıcı olarak silinir.</p>
+
+      <h2>2. E-posta ile Silme Talebi</h2>
+      <p>Uygulamaya erişiminiz yoksa veya cihazınızı kaybettiyseniz, hesabınızı kaydederken kullandığınız e-posta adresinden <a href="mailto:destek@silaway.app">destek@silaway.app</a> adresine <strong>"Hesap silme talebi"</strong> konulu bir e-posta gönderin. Kimliğinizi doğruladıktan sonra talebinizi en geç <strong>30 gün içinde</strong> işleme alırız.</p>
+
+      <h2>3. Silinen Veriler</h2>
+      <p>Hesap silindiğinde aşağıdaki kişisel veriler kaldırılır:</p>
+      <ul>
+        <li>Hesap bilgileri (ad, e-posta, profil fotoğrafı)</li>
+        <li>Topluluk sohbetine yazdığınız mesajlar ve takma adınız</li>
+        <li>Yüklediğiniz fotoğraflar/görseller</li>
+        <li>Hesabınıza bağlı cihaz/kullanım kayıtları ve tercihler</li>
+      </ul>
+
+      <h2>4. Saklanan Veriler</h2>
+      <p>Aşağıdakiler hesap silindikten sonra da kalabilir:</p>
+      <ul>
+        <li><strong>Anonim sınır bekleme süresi katkıları:</strong> kimliğinize veya konumunuza geri bağlanamayan, ham GPS içermeyen toplu istatistik verisi olarak hizmet süresince saklanır.</li>
+        <li><strong>Yasal yükümlülük gereği saklanması zorunlu kayıtlar:</strong> yalnızca ilgili mevzuatın gerektirdiği süre boyunca.</li>
+        <li><strong>Teknik yedek kopyalar:</strong> silme anından itibaren en geç <strong>30 gün içinde</strong> tamamen temizlenir.</li>
+      </ul>
+
+      <div class="warn">Topluluk sohbetine gönderilmiş mesajların kopyaları, daha önce o mesajı görmüş başka kullanıcıların cihazlarında kalmış olabilir; bu kopyalar bizim kontrolümüz dışındadır.</div>
+
+      <h2>5. İletişim</h2>
+      <p>Geliştirici: <strong>SilaWay</strong><br>
+      E-posta: <a href="mailto:destek@silaway.app">destek@silaway.app</a><br>
+      Gizlilik Politikası: <a href="./privacy.html">privacy.html</a></p>
+    </div>
+
+    <!-- ───────────── ENGLISH ───────────── -->
+    <div class="en">
+      <h1>Account &amp; Data Deletion</h1>
+      <div class="meta">App: SilaWay (com.silaway.app) · Developer: SilaWay · Last updated: 2026-06-21</div>
+
+      <div class="summary">
+        <div class="summary-label">Summary</div>
+        <p>• You can permanently delete your account directly from within the app.</p>
+        <p>• If you cannot access the app, you can request deletion by emailing <a href="mailto:destek@silaway.app">destek@silaway.app</a>.</p>
+        <p>• Personal data linked to your account is removed at the moment of deletion; technical backup copies are cleared within 30 days at the latest.</p>
+      </div>
+
+      <h2>1. Delete From Within the App (Recommended)</h2>
+      <p>To delete your account and all associated data yourself:</p>
+      <ol>
+        <li>Open the SilaWay app and sign in to your account.</li>
+        <li>Go to the <strong>Settings</strong> screen.</li>
+        <li>Tap <strong>Delete Account</strong>.</li>
+        <li>Re-authenticate (sign in again) for security and confirm.</li>
+      </ol>
+      <p>Once completed, your account and personal data are permanently deleted.</p>
+
+      <h2>2. Request Deletion by Email</h2>
+      <p>If you cannot access the app or have lost your device, send an email with the subject <strong>"Account deletion request"</strong> to <a href="mailto:destek@silaway.app">destek@silaway.app</a> from the email address you used to register. After verifying your identity, we will process your request <strong>within 30 days at the latest</strong>.</p>
+
+      <h2>3. Data That Is Deleted</h2>
+      <p>When your account is deleted, the following personal data is removed:</p>
+      <ul>
+        <li>Account information (name, email, profile photo)</li>
+        <li>Messages you posted in community chat and your nickname</li>
+        <li>Photos/images you uploaded</li>
+        <li>Device/usage records and preferences linked to your account</li>
+      </ul>
+
+      <h2>4. Data That Is Retained</h2>
+      <p>The following may remain after account deletion:</p>
+      <ul>
+        <li><strong>Anonymous border wait-time contributions:</strong> kept as aggregated statistics for the lifetime of the service; they contain no raw GPS and cannot be linked back to your identity or location.</li>
+        <li><strong>Records we are legally required to retain:</strong> only for the period required by applicable law.</li>
+        <li><strong>Technical backup copies:</strong> fully cleared <strong>within 30 days at the latest</strong> from the moment of deletion.</li>
+      </ul>
+
+      <div class="warn">Copies of messages you posted to community chat may remain on the devices of other users who already saw them; those copies are outside our control.</div>
+
+      <h2>5. Contact</h2>
+      <p>Developer: <strong>SilaWay</strong><br>
+      Email: <a href="mailto:destek@silaway.app">destek@silaway.app</a><br>
+      Privacy Policy: <a href="./privacy.html">privacy.html</a></p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 SilaWay · <a href="./">silaway.app</a> · <a href="./privacy.html">Privacy Policy</a> · <a href="./terms.html">Terms of Service</a></p>
+  </footer>
+</div>
+
+<script>
+  const tabs = document.querySelectorAll('.lang-tab');
+  const content = document.querySelector('.content');
+  const browserLang = (navigator.language || 'tr').slice(0, 2);
+  const defaultLang = browserLang === 'en' ? 'en' : 'tr';
+  setLang(defaultLang);
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => setLang(tab.dataset.lang));
+  });
+
+  function setLang(lang) {
+    content.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+    tabs.forEach((t) => t.classList.toggle('active', t.dataset.lang === lang));
+  }
+</script>
+</body>
+</html>
